@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mathii Fernando Salon</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"></script>
+    <style>
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-950 text-white">
+
+    <!-- Background Canvas for Animation -->
+    <div id="bg-animation" class="fixed inset-0 z-0"></div>
+
+    <main class="relative z-10">
+      <!-- Header / Hero -->
+      <header class="text-center py-20 bg-gradient-to-br from-pink-600 via-purple-700 to-indigo-900 shadow-2xl">
+        <h1 class="text-5xl font-extrabold tracking-wide mb-4">Mathii Fernando Salon</h1>
+        <p class="text-xl text-gray-200">gayathri hi babo Haircut | Shave | Facial</p>
+        <button onclick="bookNow()" class="mt-6 bg-white text-pink-600 hover:bg-pink-100 px-6 py-3 rounded-full text-lg font-semibold transition">Book Now</button>
+      </header>
+
+      <!-- Navigation -->
+      <nav class="sticky top-0 z-20 bg-gray-900 bg-opacity-80 backdrop-blur-md flex justify-center gap-10 py-4 text-pink-300 font-medium shadow">
+        <a href="#services" class="hover:text-white transition">Services</a>
+        <a href="#about" class="hover:text-white transition">About</a>
+        <a href="#testimonials" class="hover:text-white transition">Reviews</a>
+        <a href="#contact" class="hover:text-white transition">Contact</a>
+      </nav>
+
+      <!-- Features Highlight -->
+      <section class="py-12 text-center">
+        <h2 class="text-3xl font-semibold mb-4">Elevate Your Style with the Experts</h2>
+        <p class="text-gray-400 max-w-xl mx-auto mb-6">Step into a world of premium grooming. Whether it's a quick trim or a full makeover, we got you covered with style and care.</p>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-5xl mx-auto mt-10">
+          <div class="bg-gray-800 rounded-2xl p-6 shadow-lg hover:shadow-pink-500">
+            <h3 class="text-xl font-bold text-pink-400 mb-2">Modern Cuts</h3>
+            <p>Stay ahead with trendsetting hairstyles tailored to you.</p>
+          </div>
+          <div class="bg-gray-800 rounded-2xl p-6 shadow-lg hover:shadow-pink-500">
+            <h3 class="text-xl font-bold text-pink-400 mb-2">Luxury Experience</h3>
+            <p>Relaxing environment, pro tools, and expert hands at work.</p>
+          </div>
+          <div class="bg-gray-800 rounded-2xl p-6 shadow-lg hover:shadow-pink-500">
+            <h3 class="text-xl font-bold text-pink-400 mb-2">Easy Booking</h3>
+            <p>Reserve your slot online in seconds and walk in stress-free.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services -->
+      <section id="services" class="py-16 px-4 bg-gradient-to-r from-gray-900 to-gray-800">
+        <h2 class="text-4xl font-bold text-center text-pink-400 mb-10">Our Services</h2>
+        <div class="grid gap-10 md:grid-cols-3 max-w-6xl mx-auto">
+          <div class="bg-gray-900 p-6 rounded-2xl border border-pink-600 shadow-lg">
+            <h3 class="text-2xl font-semibold text-pink-400 mb-2">Haircut ✂️</h3>
+            <p>Classic fades, modern cuts, and personalized styles to suit your personality.</p>
+          </div>
+          <div class="bg-gray-900 p-6 rounded-2xl border border-pink-600 shadow-lg">
+            <h3 class="text-2xl font-semibold text-pink-400 mb-2">Shave 🪒</h3>
+            <p>Luxury straight razor shaves and stylish beard trims.</p>
+          </div>
+          <div class="bg-gray-900 p-6 rounded-2xl border border-pink-600 shadow-lg">
+            <h3 class="text-2xl font-semibold text-pink-400 mb-2">Facial 💆</h3>
+            <p>Deep cleanse, hydration boost, and glowing results with custom facial care.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- About -->
+      <section id="about" class="py-16 px-6 bg-gray-950">
+        <h2 class="text-4xl font-bold text-center text-white mb-6">Who We Are</h2>
+        <p class="max-w-3xl mx-auto text-center text-gray-400 text-lg">Mathii Fernando Salon blends tradition with trend. With a reputation built on precision, hospitality, and care, we serve as a grooming haven for men who value confidence and class. Our mission is simple: make you look and feel your best.</p>
+      </section>
+
+      <!-- Reviews -->
+      <section id="testimonials" class="py-16 bg-gray-900">
+        <h2 class="text-4xl font-bold text-center text-pink-400 mb-10">Client Reviews</h2>
+        <div class="grid gap-6 md:grid-cols-2 max-w-5xl mx-auto">
+          <div class="bg-gray-800 p-6 rounded-xl shadow-md">
+            <p class="italic text-gray-300">"Best haircut I’ve had in years! Friendly staff and top-notch service."</p>
+            <p class="mt-4 font-semibold text-pink-400">– Kavindu</p>
+          </div>
+          <div class="bg-gray-800 p-6 rounded-xl shadow-md">
+            <p class="italic text-gray-300">"The facial was so relaxing and my skin felt amazing afterwards!"</p>
+            <p class="mt-4 font-semibold text-pink-400">– Anjana</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="py-16 bg-gray-950 text-center">
+        <h2 class="text-4xl font-bold text-white mb-6">Let’s Connect</h2>
+        <p class="text-gray-400 text-lg mb-4">Reach out to us to schedule your appointment or ask us anything!</p>
+        <div class="text-gray-200">
+          <p class="text-xl">📞 077-1234567</p>
+          <p class="text-xl">📍 123 Barber Street, Colombo</p>
+        </div>
+        <button onclick="bookNow()" class="mt-6 bg-pink-500 hover:bg-pink-600 text-white px-6 py-3 rounded-full text-lg font-semibold">Book Appointment</button>
+      </section>
+
+      <!-- Footer -->
+      <footer class="py-6 bg-gray-900 text-center text-gray-400 text-sm">
+        &copy; 2025 Mathii Fernando Salon | Designed with ❤️ in Sri Lanka
+      </footer>
+    </main>
+
+    <!-- JS Section -->
+    <script>
+      function bookNow() {
+        alert("Thank you for booking with Mathii Fernando Salon!");
+      }
+
+      // p5.js animated background effect
+      new p5(p => {
+        let particles = [];
+        p.setup = () => {
+          p.createCanvas(p.windowWidth, p.windowHeight).parent("bg-animation");
+          for (let i = 0; i < 100; i++) {
+            particles.push({
+              x: p.random(p.width),
+              y: p.random(p.height),
+              r: p.random(2, 4),
+              dx: p.random(-1, 1),
+              dy: p.random(-1, 1)
+            });
+          }
+        };
+        p.draw = () => {
+          p.clear();
+          p.noStroke();
+          p.fill(255, 100);
+          for (let pt of particles) {
+            p.circle(pt.x, pt.y, pt.r);
+            pt.x += pt.dx;
+            pt.y += pt.dy;
+            if (pt.x < 0 || pt.x > p.width) pt.dx *= -1;
+            if (pt.y < 0 || pt.y > p.height) pt.dy *= -1;
+          }
+        };
+      });
+    </script>
+  </body>
+</html>
